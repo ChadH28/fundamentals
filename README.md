@@ -7,7 +7,12 @@ Translate these pages into a frontend where users can view and create blog posts
   [Concepts page](https://payloadcms.com/docs/getting-started/concepts)
 - edit the password field and change postgres user (sudo -i -u postgres) once user has changed run psql, and then alter your password (ALTER USER postgres WITH PASSWORD '12345';) and edit the .env file to new password
 - can make collection types and item types just by the schema you set it
+- add your collection type to payload.config.js under collection array
 
+- can make global blog page, or components, by making component folder you need in src/ directory
+- add your global type to payload.config.js under globals array
+
+- doesnt come with email client so need to use test email clients like [mailtrap](https://mailtrap.io/)
 
 # Payload Website Template
 

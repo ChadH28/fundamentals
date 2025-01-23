@@ -18,6 +18,7 @@ import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
 // new collection types 
 import Blogs from './collections/Blogs'
+import Blog from './Blog';
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -68,7 +69,7 @@ export default buildConfig({
   }),
   collections: [Pages, Posts, Blogs, Media, Categories, Users],
   cors: [getServerSideURL()].filter(Boolean),
-  globals: [Header, Footer],
+  globals: [Header, Footer, Blog],
   plugins: [
     ...plugins,
     // storage-adapter-placeholder

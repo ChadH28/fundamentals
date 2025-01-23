@@ -49,10 +49,12 @@ export interface Config {
   globals: {
     header: Header;
     footer: Footer;
+    blog: Blog1;
   };
   globalsSelect: {
     header: HeaderSelect<false> | HeaderSelect<true>;
     footer: FooterSelect<false> | FooterSelect<true>;
+    blog: BlogSelect<false> | BlogSelect<true>;
   };
   locale: null;
   user: User & {
@@ -1576,6 +1578,20 @@ export interface Footer {
   createdAt?: string | null;
 }
 /**
+ * Configure the top blogs displayed on the /blog page.
+ *
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blog".
+ */
+export interface Blog1 {
+  id: number;
+  title: string;
+  description?: string | null;
+  featuredBlogs: (number | Blog)[];
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
  * This interface was referenced by `Config`'s JSON-Schema
  * via the `definition` "header_select".
  */
@@ -1617,6 +1633,18 @@ export interface FooterSelect<T extends boolean = true> {
             };
         id?: T;
       };
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "blog_select".
+ */
+export interface BlogSelect<T extends boolean = true> {
+  title?: T;
+  description?: T;
+  featuredBlogs?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;
