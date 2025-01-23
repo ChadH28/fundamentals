@@ -1,3 +1,14 @@
+Create blogs page type in admin (show 4 top blogs overview) /blog
+Translate these pages into a frontend where users can view and create blog posts.
+
+# What ive learnt
+
+- look at concepts page for insight
+  [Concepts page](https://payloadcms.com/docs/getting-started/concepts)
+- edit the password field and change postgres user (sudo -i -u postgres) once user has changed run psql, and then alter your password (ALTER USER postgres WITH PASSWORD '12345';) and edit the .env file to new password
+- can make collection types and item types just by the schema you set it
+
+
 # Payload Website Template
 
 This is the official [Payload Website Template](https://github.com/payloadcms/payload/blob/main/templates/website). Use it to power websites, blogs, or portfolios from small to enterprise. This repo includes a fully-working backend, enterprise-grade admin panel, and a beautifully designed, production-ready website.
